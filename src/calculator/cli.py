@@ -1,6 +1,6 @@
 """Command-line interface for the calculator."""
 import sys
-from calculator.operations import add, subtract, multiply, divide
+from calculator.operations import add, subtract, multiply, divide, power
 
 
 OPERATIONS = {
@@ -8,6 +8,7 @@ OPERATIONS = {
     "sub": subtract,
     "mul": multiply,
     "div": divide,
+    "pow": power,
 }
 
 

@@ -1,6 +1,6 @@
 """Unit tests for calculator operations."""
 import pytest
-from calculator.operations import add, subtract, multiply, divide
+from calculator.operations import add, subtract, multiply, divide, power
 
 
 class TestAdd:
@@ -37,3 +37,11 @@ class TestDivide:
     def test_divide_by_zero_raises(self):
         with pytest.raises(ValueError, match="Cannot divide by zero"):
             divide(5, 0)
+
+
+class TestPower:
+    def test_positive_numbers(self):
+        assert power(2, 3) == 8
+
+    def test_power_of_zero(self):
+        assert power(5, 0) == 1
